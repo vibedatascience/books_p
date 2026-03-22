@@ -1,0 +1,84 @@
+<section class="chapter-section" id="ch16">
+  <div class="ch-head">
+    <span class="ch-head-num">16</span>
+    <h2>I'm So Over Being Pregnant</h2>
+  </div>
+  <p class="ch-summary">When will this baby actually arrive &mdash; and can cervical checks tell you anything useful?</p>
+
+  <div class="sec-label">When Babies Actually Arrive</div>
+
+  <p class="ch-prose">Without intervention, the average first-time mother goes into labor <strong>8 days after her due date.</strong> Close to 30% of babies are born in the 39th week, making it the single most common week. About 70% of babies arrive before the due date &mdash; but this includes all births, and first babies tend to come later.</p>
+
+  <p class="ch-prose">More useful is the conditional question: if you're still pregnant at the start of a given week, what's the chance you'll deliver that week? At 38 weeks, there's a 25% chance. At 39 weeks, 46%. If you reach your due date with no baby, there's a 60% chance you'll deliver in the next 7 days. At 42 weeks, virtually all doctors will induce.</p>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h4>Chance of Birth This Week (If Still Pregnant)</h4>
+      <p class="chart-sub">Based on all US singleton births, 2008</p>
+      <div class="chart-container" id="chart-birth-timing"></div>
+      <p class="chart-source">Source: US Natality data, 2008 &mdash; as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">1</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl">The &ldquo;due date&rdquo; is misleading.</span> First-time mothers average 8 days past it. The most common delivery week is week 39.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">2</span>
+      <div class="tk-body">
+        <div class="tk-text">If you reach 40 weeks, there's a ~60% chance you'll deliver within the next 7 days.</div>
+      </div>
+    </li>
+  </ul>
+
+  <hr class="ch-divider">
+  <div class="sec-label">Cervical Checks</div>
+
+  <p class="ch-prose">Doctors begin cervical checks late in the third trimester to assess progress toward labor. They measure <strong>dilation</strong> (how open the cervix is, from 0 to 10 cm) and <strong>effacement</strong> (how thin/short the cervix has become, reported as a percentage). Though doctors tend to emphasize dilation, <strong>effacement is actually the better predictor</strong> of when labor will start.</p>
+
+  <p class="ch-prose">A UK study measured effacement by ultrasound at 37 weeks, then tracked when women went into labor. For women more than 60% effaced at 37 weeks, nearly all (about 98%) went into labor before their due date. For women less than 40% effaced, almost none (under 10%) delivered before the due date.</p>
+
+  <p class="ch-prose">There's also a composite measure called the <strong>Bishop score</strong> (0&ndash;13), which combines cervical position, effacement, dilation, and the baby's station. A score of 6 or above indicates you're fairly advanced. The Bishop score is also highly predictive of whether an induction will result in vaginal delivery vs. C-section.</p>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">3</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl">Ask about effacement, not just dilation.</span> Cervical length is more predictive of labor onset than how many centimeters you're dilated.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">4</span>
+      <div class="tk-body">
+        <div class="tk-text">The Bishop score predicts induction success: the higher the score, the more likely a vaginal delivery. Worth knowing if you're considering induction.</div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom-line">
+    <div class="bl-label">The Bottom Line</div>
+    <p class="bl-item">&ldquo;No one has ever been pregnant forever.&rdquo;</p>
+    <p class="bl-item">&ldquo;The majority of babies arrive within a week on either side of your due date.&rdquo;</p>
+    <p class="bl-item">&ldquo;Cervical checks are predictive of coming labor (although not perfectly); ask about effacement in addition to dilation to get a more complete picture.&rdquo;</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  Charts.renderOnVisible('#chart-birth-timing', function () {
+    Charts.lollipopChart('#chart-birth-timing', [
+      { label: 'Week 35', value: 3 },
+      { label: 'Week 36', value: 5 },
+      { label: 'Week 37', value: 11 },
+      { label: 'Week 38', value: 25 },
+      { label: 'Week 39', value: 46 },
+      { label: 'Week 40 (after due date)', value: 59 },
+      { label: 'Week 41', value: 58 },
+    ], { colors: ['#7E9196','#7E9196','#5AA4C8','#C9A94E','#2E7D6A','#2E7D6A','#2E7D6A'] });
+  });
+})();
+</script>

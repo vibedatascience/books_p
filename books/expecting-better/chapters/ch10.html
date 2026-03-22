@@ -1,0 +1,90 @@
+<section class="chapter-section" id="ch10">
+  <div class="ch-head">
+    <span class="ch-head-num">10</span>
+    <h2>Eating for Two? You Wish</h2>
+  </div>
+  <p class="ch-summary">How much weight should you actually gain — and does going over the guidelines matter?</p>
+
+  <div class="sec-label">The Guidelines</div>
+
+  <p class="ch-prose">The Institute of Medicine sets pregnancy weight gain recommendations based on pre-pregnancy BMI. Normal weight (BMI 18.5–25): gain 25–35 lbs. Overweight (BMI 25–30): 15–25 lbs. Obese (BMI 30+): 11–20 lbs. Underweight (BMI under 18.5): 28–40 lbs. The logic is simple — pregnancy requires about 300 extra calories per day. If you're already overweight, doctors would normally recommend fewer calories, so the pregnancy surplus is smaller.</p>
+
+  <p class="ch-prose">Despite all the monitoring and lectures, <strong>more than half of women gain more than the recommended amount.</strong> Most of them have perfectly normal babies.</p>
+
+  <hr class="ch-divider">
+  <div class="sec-label">What Weight Gain Actually Affects</div>
+
+  <p class="ch-prose"><strong>Your weight after pregnancy:</strong> Women who gain the recommended amount are about 5 lbs heavier at 6 months postpartum. Those who gain more are about 17 lbs heavier. But a more recent study found 90% of normal-weight women returned to a normal weight range by 24 months regardless of how much they gained.</p>
+
+  <p class="ch-prose"><strong>Your child's weight later:</strong> A Danish study following 2,500 children from birth through age 42 found that for every extra kilogram Mom gained, offspring BMI increased by about 0.03. That means gaining 10 lbs over the recommendation would increase your child's expected BMI by 0.13 — the difference between 149 and 150 lbs on a 5'6" frame. The effect exists, but it's tiny.</p>
+
+  <p class="ch-prose"><strong>Baby's birth weight — this is what really matters.</strong> A study of ~500,000 births in Florida showed a clear pattern: more weight gain = larger baby. Less gain = smaller baby. Women gaining 10 lbs under the recommendation doubled their chance of a small-for-gestational-age (SGA) baby. Women gaining 10 lbs over doubled their chance of a large-for-gestational-age (LGA) baby.</p>
+
+  <div class="charts-row duo">
+    <div class="chart-card">
+      <h4>Baby Size Risk by Weight Gain</h4>
+      <p class="chart-sub">Normal-weight women, ~500,000 births (Florida)</p>
+      <div class="chart-container" id="chart-weight-baby"></div>
+      <p class="chart-source">Source: Florida births study — as cited in Expecting Better</p>
+    </div>
+    <div class="chart-card">
+      <h4>IOM Weight Gain Guidelines</h4>
+      <p class="chart-sub">Recommended gain by pre-pregnancy BMI category</p>
+      <div class="chart-container" id="chart-weight-guidelines"></div>
+      <p class="chart-source">Source: Institute of Medicine — as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <p class="ch-prose">The key insight: <strong>complications from a too-small baby are much more serious than from a too-large baby.</strong> SGA babies face breathing problems, blood sugar issues, and neurological risks. LGA babies mainly face a higher chance of C-section. If anything, you should worry more about gaining too little than too much. The guidelines may actually be set a few pounds too low — they optimize for minimizing total abnormal-size babies rather than minimizing total complications.</p>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">1</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl">A few pounds over the guidelines doesn't matter.</span> The effects on baby weight are gradual — 36 lbs and 35 lbs produce nearly identical outcomes. There's no magic threshold.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">2</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl-warm">Too-small babies face worse complications than too-large babies.</span> If you're going to err, err on the side of gaining a bit more.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">3</span>
+      <div class="tk-body">
+        <div class="tk-text">Long-term effects on your child's weight are real but negligible — 10 lbs over the recommendation changes your child's weight by about 1 lb.</div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom-line">
+    <div class="bl-label">The Bottom Line</div>
+    <p class="bl-item">&ldquo;On average, if you gain more weight, your baby will be larger. If you gain less weight, your baby will be smaller.&rdquo;</p>
+    <p class="bl-item">&ldquo;Both very large and very small babies face additional risks, although too-small babies face greater risks. If anything, you should probably be more concerned about gaining too little weight than too much.&rdquo;</p>
+    <p class="bl-item">&ldquo;But, mostly, chill out.&rdquo;</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  Charts.renderOnVisible('#chart-weight-baby', function () {
+    Charts.butterflyChart('#chart-weight-baby', [
+      { category: '10 lbs under rec.', left: 20, right: 2.5 },
+      { category: 'Recommended', left: 10, right: 5 },
+      { category: '10 lbs over rec.', left: 5, right: 10 },
+    ], { leftLabel: 'Too Small (SGA)', rightLabel: 'Too Large (LGA)', leftColor: '#C2673A', rightColor: '#5AA4C8' });
+  });
+  Charts.renderOnVisible('#chart-weight-guidelines', function () {
+    Charts.lollipopChart('#chart-weight-guidelines', [
+      { label: 'Underweight (<18.5)', value: 34 },
+      { label: 'Normal (18.5\u201325)', value: 30 },
+      { label: 'Overweight (25\u201330)', value: 20 },
+      { label: 'Obese (30+)', value: 15.5 },
+    ], {
+      colors: ['#5AA4C8','#2E7D6A','#C9A94E','#C2673A'],
+      valueLabel: function(d) { return d.value + ' lbs (mid)'; }
+    });
+  });
+})();
+</script>

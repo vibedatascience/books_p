@@ -1,0 +1,82 @@
+<section class="chapter-section" id="ch21">
+  <div class="ch-head">
+    <span class="ch-head-num">21</span>
+    <h2>Who Should Come to the Birth?</h2>
+  </div>
+  <p class="ch-summary">Home birth vs. hospital birth &mdash; the real pros, cons, and what the (messy) evidence says about safety.</p>
+
+  <div class="sec-label">The Case For Home Birth</div>
+
+  <p class="ch-prose">Fewer than 1% of US women have a home birth, but among those who do, there are measurable benefits. Comparing low-risk births planned at home vs. hospital, researchers found that planned home births had <strong>fewer epidurals, fewer episiotomies, fewer C-sections, less instrument use, less monitoring, fewer vaginal tears, and lower infection rates.</strong> Women were also more comfortable laboring in their own environment.</p>
+
+  <p class="ch-prose">Home birth isn't an option if you're high-risk (breech baby, twins, gestational diabetes), and it eliminates the epidural option entirely. This leaves low-risk women committed to unmedicated birth as the realistic candidates.</p>
+
+  <hr class="ch-divider">
+  <div class="sec-label">The Risks</div>
+
+  <p class="ch-prose"><strong>Hospital transfer:</strong> About <strong>a third of first-time mothers</strong> planning home births end up at the hospital anyway &mdash; because labor stalls, the midwife decides it's necessary, or they change their mind. For women who've had a baby before, it's about 10%. A transfer during active labor is more disruptive than a planned hospital arrival.</p>
+
+  <p class="ch-prose"><strong>Mortality:</strong> The evidence is genuinely mixed. A widely cited 2010 meta-analysis found neonatal mortality was 2&ndash;3 times higher for home births (2 in 1,000 vs. 0.9 in 1,000). ACOG cited it to warn against home birth. But the study had methodological problems: it combined studies measuring different outcomes, and the results were internally inconsistent. Other studies from the Netherlands, British Columbia, and the UK found <strong>no increased risk</strong>. There is no consensus in the medical literature.</p>
+
+  <p class="ch-prose">Logic suggests some added risk must exist &mdash; in a rare emergency, being 30 seconds from an OR is better than 10 minutes away. But the size of that risk remains genuinely uncertain. Maternal mortality, thankfully, is too rare (11 per 100,000 US births) to measure statistically.</p>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h4>Home Birth Transfer Rates</h4>
+      <p class="chart-sub">% of planned home births ending at the hospital</p>
+      <div class="chart-container" id="chart-homebirth-transfer"></div>
+      <p class="chart-source">Source: Summary of home birth studies &mdash; as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <hr class="ch-divider">
+  <div class="sec-label">Choosing a Midwife</div>
+
+  <p class="ch-prose">If you do choose home birth, the most important decision is your attendant. <strong>Certified nurse-midwives (CNMs)</strong> have both nursing and midwifery training, a bachelor's degree minimum, and national accreditation. The meta-analysis that found increased home-birth risk was careful to note <strong>no increased risk for births supervised by CNMs.</strong> More training means better ability to handle emergencies and identify when to transfer. Insist on the most qualified midwife you can find.</p>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">1</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl">Home birth has real benefits</span> &mdash; fewer interventions, less tearing, better recovery. But only for low-risk, unmedicated births.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">2</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl-warm">First-time mothers have a ~30% hospital transfer rate.</span> Plan for this possibility &mdash; know how far you are from a hospital.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">3</span>
+      <div class="tk-body">
+        <div class="tk-text">Safety evidence is genuinely mixed. Some studies show slightly higher infant mortality; others don't. Risks are very low either way.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">4</span>
+      <div class="tk-body">
+        <div class="tk-text">If you go this route, <strong>choose a certified nurse-midwife.</strong> Studies showing increased risk found no increased risk with CNMs.</div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom-line">
+    <div class="bl-label">The Bottom Line</div>
+    <p class="bl-item">&ldquo;If you don't want any pain medication, there are some pros to home birth. There are fewer C-sections, less instrument delivery, easier recovery for Mom, and less tearing.&rdquo;</p>
+    <p class="bl-item">&ldquo;If you haven't done this before, there is about a 30 percent chance you'll end up in the hospital anyway.&rdquo;</p>
+    <p class="bl-item">&ldquo;Some studies suggest that mortality risks are higher with home birth, others do not. Risks are low in any case.&rdquo;</p>
+    <p class="bl-item">&ldquo;If you do decide to go this route, make sure you choose as experienced a midwife as possible, ideally a certified nurse-midwife.&rdquo;</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  Charts.renderOnVisible('#chart-homebirth-transfer', function () {
+    Charts.lollipopChart('#chart-homebirth-transfer', [
+      { label: 'First-time mothers', value: 33 },
+      { label: 'Second+ birth', value: 10 },
+    ], { colors: ['#C2673A','#2E7D6A'] });
+  });
+})();
+</script>

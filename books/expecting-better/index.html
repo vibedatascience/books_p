@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expecting Better &mdash; The Parenthood Library</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../../index.html" class="nav-brand">The Parenthood Library</a>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Books</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="book-header">
+    <h1>Expecting Better</h1>
+    <span class="book-meta">Emily Oster &middot; 2013</span>
+    <img src="../../assets/img/expecting-better-cover.jpg" alt="" class="book-header-cover">
+  </header>
+  <p class="book-intro">
+    Why the conventional pregnancy wisdom is wrong &mdash; and what you really need to know.
+  </p>
+
+  <div class="book-layout">
+
+    <!-- Main content -->
+    <main class="book-main">
+      <div id="chapters-content" data-chapters="chapters/ch01.html, chapters/ch02.html, chapters/ch03.html, chapters/ch04.html, chapters/ch05.html, chapters/ch06.html, chapters/ch07.html, chapters/ch08.html, chapters/ch09.html, chapters/ch10.html, chapters/ch11.html, chapters/ch12.html, chapters/ch13.html, chapters/ch14.html, chapters/ch15.html, chapters/ch16.html, chapters/ch17.html, chapters/ch18.html, chapters/ch19.html, chapters/ch20.html, chapters/ch21.html, chapters/ch22.html"></div>
+
+      <div class="disclaimer" style="padding:1rem 0 0;">
+        <div class="disclaimer-inner">
+          <strong>Note.</strong> Published 2013. Some data (esp. NIPT/screening) has evolved.
+        </div>
+      </div>
+    </main>
+
+    <!-- Sticky sidebar TOC -->
+    <aside class="sidebar">
+      <nav class="sidebar-inner">
+        <div class="sidebar-label">Contents</div>
+
+        <div class="sidebar-part">
+          <div class="sidebar-part-label">Conception</div>
+          <ul class="sidebar-chapters">
+            <li><a href="#ch01"><span class="s-num">01</span>Prep Work</a></li>
+            <li><a href="#ch02"><span class="s-num">02</span>Data-Driven Conception</a></li>
+            <li><a href="#ch03"><span class="s-num">03</span>The Two-Week Wait</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-part">
+          <div class="sidebar-part-label">First Trimester</div>
+          <ul class="sidebar-chapters">
+            <li><a href="#ch04"><span class="s-num">04</span>The Vices</a></li>
+            <li><a href="#ch05"><span class="s-num">05</span>Miscarriage Fears</a></li>
+            <li><a href="#ch06"><span class="s-num">06</span>Deli Meats!</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-part">
+          <div class="sidebar-part-label">Second Trimester</div>
+          <ul class="sidebar-chapters">
+            <li><a href="#ch07"><span class="s-num">07</span>Nausea</a></li>
+            <li><a href="#ch08"><span class="s-num">08</span>Screening &amp; Testing</a></li>
+            <li><a href="#ch09"><span class="s-num">09</span>Perils of Gardening</a></li>
+            <li><a href="#ch10"><span class="s-num">10</span>Weight Gain</a></li>
+            <li><a href="#ch11"><span class="s-num">11</span>Pink &amp; Blue</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-part">
+          <div class="sidebar-part-label">Third Trimester</div>
+          <ul class="sidebar-chapters">
+            <li><a href="#ch12"><span class="s-num">12</span>Exercise &amp; Sleep</a></li>
+            <li><a href="#ch13"><span class="s-num">13</span>What to Worry About</a></li>
+            <li><a href="#ch14"><span class="s-num">14</span>Premature Birth</a></li>
+            <li><a href="#ch15"><span class="s-num">15</span>High-Risk</a></li>
+            <li><a href="#ch16"><span class="s-num">16</span>So Over It</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-part">
+          <div class="sidebar-part-label">Labor &amp; Delivery</div>
+          <ul class="sidebar-chapters">
+            <li><a href="#ch17"><span class="s-num">17</span>Induction</a></li>
+            <li><a href="#ch18"><span class="s-num">18</span>Labor Numbers</a></li>
+            <li><a href="#ch19"><span class="s-num">19</span>The Epidural</a></li>
+            <li><a href="#ch20"><span class="s-num">20</span>Beyond Pain Relief</a></li>
+            <li><a href="#ch21"><span class="s-num">21</span>Who's at the Birth</a></li>
+            <li><a href="#ch22"><span class="s-num">22</span>The Aftermath</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+  </div>
+
+  <footer class="footer">
+    <p>A personal reference project. Not affiliated with any author or publisher.</p>
+  </footer>
+
+  <!-- Mobile TOC -->
+  <button class="mobile-toc-toggle" id="mobileTocBtn" aria-label="Table of contents">TOC</button>
+  <div class="mobile-toc-overlay" id="mobileTocOverlay"></div>
+  <div class="mobile-toc-drawer" id="mobileTocDrawer">
+    <div class="drawer-handle"></div>
+    <div class="sidebar-part">
+      <div class="sidebar-part-label">Conception</div>
+      <ul class="sidebar-chapters">
+        <li><a href="#ch01"><span class="s-num">01</span>Prep Work</a></li>
+        <li><a href="#ch02"><span class="s-num">02</span>Data-Driven Conception</a></li>
+        <li><a href="#ch03"><span class="s-num">03</span>The Two-Week Wait</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-part">
+      <div class="sidebar-part-label">First Trimester</div>
+      <ul class="sidebar-chapters">
+        <li><a href="#ch04"><span class="s-num">04</span>The Vices</a></li>
+        <li><a href="#ch05"><span class="s-num">05</span>Miscarriage Fears</a></li>
+        <li><a href="#ch06"><span class="s-num">06</span>Deli Meats!</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-part">
+      <div class="sidebar-part-label">Second Trimester</div>
+      <ul class="sidebar-chapters">
+        <li><a href="#ch07"><span class="s-num">07</span>Nausea</a></li>
+        <li><a href="#ch08"><span class="s-num">08</span>Screening &amp; Testing</a></li>
+        <li><a href="#ch09"><span class="s-num">09</span>Perils of Gardening</a></li>
+        <li><a href="#ch10"><span class="s-num">10</span>Weight Gain</a></li>
+        <li><a href="#ch11"><span class="s-num">11</span>Pink &amp; Blue</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-part">
+      <div class="sidebar-part-label">Third Trimester</div>
+      <ul class="sidebar-chapters">
+        <li><a href="#ch12"><span class="s-num">12</span>Exercise &amp; Sleep</a></li>
+        <li><a href="#ch13"><span class="s-num">13</span>What to Worry About</a></li>
+        <li><a href="#ch14"><span class="s-num">14</span>Premature Birth</a></li>
+        <li><a href="#ch15"><span class="s-num">15</span>High-Risk</a></li>
+        <li><a href="#ch16"><span class="s-num">16</span>So Over It</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-part">
+      <div class="sidebar-part-label">Labor &amp; Delivery</div>
+      <ul class="sidebar-chapters">
+        <li><a href="#ch17"><span class="s-num">17</span>Induction</a></li>
+        <li><a href="#ch18"><span class="s-num">18</span>Labor Numbers</a></li>
+        <li><a href="#ch19"><span class="s-num">19</span>The Epidural</a></li>
+        <li><a href="#ch20"><span class="s-num">20</span>Beyond Pain Relief</a></li>
+        <li><a href="#ch21"><span class="s-num">21</span>Who's at the Birth</a></li>
+        <li><a href="#ch22"><span class="s-num">22</span>The Aftermath</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="../../js/charts.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

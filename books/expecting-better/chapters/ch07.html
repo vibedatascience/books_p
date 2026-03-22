@@ -1,0 +1,77 @@
+<section class="chapter-section" id="ch07">
+  <div class="ch-head">
+    <span class="ch-head-num">07</span>
+    <h2>Nausea and My Mother-in-Law</h2>
+  </div>
+  <p class="ch-summary">What's normal, what's not, and what actually works to treat it.</p>
+
+  <div class="sec-label">What's Normal</div>
+
+  <p class="ch-prose">Almost 90% of women report some nausea during pregnancy, and more than half report vomiting. It typically starts around week 6, peaks at weeks 8–9, and resolves by weeks 13–14. Despite the name "morning sickness," more than 80% of women in detailed studies reported feeling sick all day, not just in the morning.</p>
+
+  <p class="ch-prose">The average pregnant woman vomits on only about 6 days total over the course of the pregnancy — concentrated in a few bad stretches. At the worst point, the average woman was throwing up at least once a day, and about 13% were vomiting 3+ times daily. <strong>If you're vomiting every day for weeks, that's above average</strong> — only about 5% of women report nausea that severe.</p>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h4>Women Reporting Vomiting by Week</h4>
+      <p class="chart-sub">% of women experiencing vomiting, by pregnancy week</p>
+      <div class="chart-container" id="chart-nausea-week"></div>
+      <p class="chart-source">Source: Pregnancy nausea studies — as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <p class="ch-prose">Very severe nausea is called hyperemesis gravidarum — defined as vomiting more than 3 times daily with complications like dehydration, weight loss, or low potassium. Almost 1% of pregnant women are hospitalized for this. It's dangerous for both mother and baby, potentially leading to low birth weight and preterm birth. But if you eventually gain appropriate weight after the nausea resolves, there don't seem to be lasting effects on baby size.</p>
+
+  <p class="ch-prose">The silver lining: <span class="hl">nausea is a sign of a healthy pregnancy.</span> One study showed that miscarriage risk was 30% for women without nausea versus just 8% for those who were nauseated. The sicker you feel, the better the sign — though that's cold comfort when you're hovering over the toilet.</p>
+
+  <hr class="ch-divider">
+  <div class="sec-label">What Works</div>
+
+  <p class="ch-prose">Treatment follows a ladder. <strong>Start simple:</strong> eat only what you can tolerate, eat small amounts frequently, keep crackers by the bed. <strong>Ginger and vitamin B6</strong> are the first real interventions — randomized trials show B6 reduces mild nausea (though not vomiting), and a couple of small studies support ginger tea. Acupuncture and acupressure showed no benefit in a review of randomized studies.</p>
+
+  <p class="ch-prose">If those don't work, the most effective over-the-counter option is a combination of <strong>vitamin B6 (10mg) + half a Unisom tablet, taken before bed.</strong> This is literally the same formulation as Bendectin, a prescription drug that was pulled from the US market in 1983 — not because it was unsafe, but because the manufacturer couldn't afford the legal fees from frivolous lawsuits. A 1994 review of 27 studies found women who took Bendectin actually had slightly <em>fewer</em> birth defects. After it was pulled, hospitalizations for severe nausea doubled. The drug retained its FDA approval and is still widely used in Canada and the UK. It was reapproved in the US in 2013 under the name Diclegis.</p>
+
+  <p class="ch-prose">For stronger relief, prescription options include Zofran and promethazine — studies in animals and small human trials suggest they're safe and at least somewhat effective. Steroids are sometimes used for the most severe cases but may increase cleft lip risk in the first trimester.</p>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">1</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl">Nausea is normal and a good sign.</span> 90% of women experience it. Miscarriage rates are much lower for nauseous women (8% vs 30%).</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">2</span>
+      <div class="tk-body">
+        <div class="tk-text">Treatment ladder: small meals → B6 + ginger → <strong>B6 + Unisom</strong> (= Bendectin) → prescription drugs. The B6 + Unisom combo is safe, effective, and available over the counter.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">3</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl-warm">Don't suffer in silence.</span> Serious dehydration and weight loss can cause complications. Safe treatment options exist — ask your doctor.</div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom-line">
+    <div class="bl-label">The Bottom Line</div>
+    <p class="bl-item">&ldquo;Some nausea is normal and is probably a good sign about pregnancy.&rdquo;</p>
+    <p class="bl-item">&ldquo;Vomiting every day for weeks is more than the average person experiences.&rdquo;</p>
+    <p class="bl-item">&ldquo;Treatment (in order): (1) small meals, (2) vitamin B6 + ginger ale, (3) vitamin B6 + Unisom (a.k.a. Bendectin), (4) prescription drugs.&rdquo;</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  Charts.renderOnVisible('#chart-nausea-week', function () {
+    Charts.waffleChart('#chart-nausea-week', [
+      { label: 'Weeks 5\u20138', value: 49 },
+      { label: 'Weeks 9\u201312', value: 37 },
+      { label: 'Weeks 13\u201316', value: 20 },
+      { label: 'Weeks 17\u201320', value: 15 },
+      { label: 'Weeks 21+', value: 7 },
+    ], { activeColors: ['#C2673A','#C2673A','#C9A94E','#5AA4C8','#2E7D6A'] });
+  });
+})();
+</script>

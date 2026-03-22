@@ -1,0 +1,93 @@
+<section class="chapter-section" id="ch14">
+  <div class="ch-head">
+    <span class="ch-head-num">14</span>
+    <h2>Premature Birth</h2>
+  </div>
+  <p class="ch-summary">What are the survival odds week by week &mdash; and why bed rest probably doesn't help.</p>
+
+  <div class="sec-label">Survival by Week</div>
+
+  <p class="ch-prose">Preterm birth &mdash; delivery before 37 weeks &mdash; occurs in about <strong>12% of US pregnancies</strong>. The outcomes depend enormously on how early the baby arrives. Survival outside the womb is possible as early as 22 weeks, though unlikely. By 24 weeks, more than half of babies survive their first year. By 28 weeks &mdash; just 6&frac12; months into pregnancy &mdash; the survival rate is almost <strong>95%</strong>. By 34 weeks, it's 99%.</p>
+
+  <p class="ch-prose">Until 34 weeks, the chance of having a baby in any given week is less than 1 in 100. Before 30 weeks it's less than 1 in 500. Still, prematurity has consequences: a study of 5-year-olds born before 30 weeks found that <strong>75% had at least one disability</strong> (vs. 27% among full-term children) and their IQs were 5&ndash;14 points lower on average.</p>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h4>Survival Rate by Gestational Week</h4>
+      <p class="chart-sub">First-year survival for babies born at each week</p>
+      <div class="chart-container" id="chart-preterm-survival"></div>
+      <p class="chart-source">Source: US Natality Detail Files, 2005 &mdash; as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">1</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl">Survival improves dramatically each week.</span> From 23% at 22 weeks to 95% at 28 weeks. Every additional week in the womb makes a large difference.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">2</span>
+      <div class="tk-body">
+        <div class="tk-text"><strong>Steroid shots</strong> given to the mother can speed fetal lung development. Even 24 hours of treatment reduces fetal death by 30%. This is why delaying birth by even a day or two matters.</div>
+      </div>
+    </li>
+  </ul>
+
+  <hr class="ch-divider">
+  <div class="sec-label">Bed Rest</div>
+
+  <p class="ch-prose">Bed rest is prescribed to as many as 20% of pregnant women, yet <span class="hl-warm">there is no compelling evidence that it prevents preterm labor.</span> In a study of 1,200 women with threatened preterm labor, 400 were put on bed rest and 800 were not. Preterm birth rates were nearly identical: 7.9% in the bed rest group vs. 8.5% in the control group.</p>
+
+  <p class="ch-prose">Reviews of the literature are damning. One 2011 paper concluded: <em>&ldquo;There have been no complications of pregnancy for which the literature consistently demonstrates a benefit to antepartum bed rest.&rdquo;</em> Another was titled simply: <em>&ldquo;Lack of Evidence for Prescription of Antepartum Bed Rest.&rdquo;</em></p>
+
+  <p class="ch-prose">Worse, bed rest has documented <strong>negative</strong> consequences: bone loss, muscle atrophy, weight loss, decreased infant birth weight, increased blood clot risk, and financial strain on families. A 2009 survey found that more than half of OBs acknowledged bed rest has no or minimal benefit &mdash; yet <strong>90% of them still prescribed it.</strong></p>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h4>Bed Rest: No Benefit Found</h4>
+      <p class="chart-sub">Preterm birth rate in randomized trial, 1,200 women</p>
+      <div class="chart-container" id="chart-bedrest"></div>
+      <p class="chart-source">Source: Randomized trial of bed rest &mdash; as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">3</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl-warm">Bed rest has no proven benefit and real downsides.</span> If your doctor prescribes it, ask for the evidence.</div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom-line">
+    <div class="bl-label">The Bottom Line</div>
+    <p class="bl-item">&ldquo;Survival outside the womb is possible (although not likely) as early as 22 weeks. Survival dramatically increases with continued gestation after this point. By 28 weeks, more than 90 percent of babies survive, and by 34 weeks it's 99 percent.&rdquo;</p>
+    <p class="bl-item">&ldquo;Delaying birth after the onset of labor is difficult, but usually can be done for a few days. Delaying even just a day or two can have large impacts on survival.&rdquo;</p>
+    <p class="bl-item">&ldquo;There is no evidence that bed rest will prevent preterm labor. Avoid it.&rdquo;</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  Charts.renderOnVisible('#chart-preterm-survival', function () {
+    Charts.lollipopChart('#chart-preterm-survival', [
+      { label: '22 weeks', value: 23 },
+      { label: '24 weeks', value: 61 },
+      { label: '26 weeks', value: 82 },
+      { label: '28 weeks', value: 93 },
+      { label: '30 weeks', value: 96 },
+      { label: '32 weeks', value: 98 },
+      { label: '34 weeks', value: 99 },
+      { label: '37+ (full term)', value: 99.8 },
+    ], { colors: ['#C2673A','#C2673A','#C9A94E','#5AA4C8','#2E7D6A','#2E7D6A','#2E7D6A','#2E7D6A'] });
+  });
+  Charts.renderOnVisible('#chart-bedrest', function () {
+    Charts.butterflyChart('#chart-bedrest', [
+      { category: 'Preterm Birth Rate', left: 8.5, right: 7.9 },
+    ], { leftLabel: 'No Bed Rest', rightLabel: 'Bed Rest', leftColor: '#2E7D6A', rightColor: '#C2673A' });
+  });
+})();
+</script>

@@ -1,0 +1,77 @@
+<section class="chapter-section" id="ch13">
+  <div class="ch-head">
+    <span class="ch-head-num">13</span>
+    <h2>Drug Safety</h2>
+  </div>
+  <p class="ch-summary">Which medications are safe during pregnancy, and how to interpret the FDA's classification system.</p>
+
+  <div class="sec-label">How Drugs Reach the Baby</div>
+
+  <p class="ch-prose">Your baby develops in the uterus, connected to you through the <strong>placenta</strong> &mdash; an organ that transfers nutrients from mother to baby and waste products back out. Not long ago, doctors believed the placenta was an impenetrable barrier. We now know that's wrong: virtually every drug you take &mdash; over-the-counter, prescription, or illegal &mdash; reaches the baby through a process called passive diffusion.</p>
+
+  <p class="ch-prose">There are two exceptions. Some drug molecules are simply too large to pass through the placenta &mdash; <strong>heparin</strong> (a blood thinner) is a classic example. Others get trapped in the placenta itself, which acts as a depot and never passes them along. But for the vast majority of medications &mdash; painkillers, antibiotics, antidepressants &mdash; the baby is exposed to at least some of what you take.</p>
+
+  <hr class="ch-divider">
+  <div class="sec-label">The FDA Classification System</div>
+
+  <p class="ch-prose">The FDA categorizes drugs into five classes: <strong>A, B, C, D, and X</strong>, from safest to most dangerous. Categories A and B are safe. D and X should be avoided. The real problem is Category C &mdash; which accounts for roughly <strong>70% of all drugs</strong> &mdash; where evidence is ambiguous.</p>
+
+  <p class="ch-prose"><strong>Category A</strong> means well-controlled human studies have shown no risk. Almost nothing qualifies. The one clear example is <strong>folic acid</strong>, which not only is safe but actively prevents birth defects: women who take it are about 70% less likely to have a baby with a neural tube defect like spina bifida. A large Norwegian study also linked folic acid supplementation before conception to lower rates of autism.</p>
+
+  <p class="ch-prose"><strong>Category B</strong> means either human studies show no increased risk or animal studies show no fetal harm. <strong>Tylenol (acetaminophen)</strong> is the most common example. A Danish study of over 100,000 women &mdash; half of whom used acetaminophen during pregnancy &mdash; found no increase in birth defects, miscarriage, stillbirth, or low birth weight. In most other countries, acetaminophen is effectively Category A. The US system is more stringent.</p>
+
+  <p class="ch-prose"><strong>Category C</strong> is the problematic catch-all: no adequate human studies, and either animal studies showed risk or no animal studies exist. About 70% of drugs fall here, meaning the FDA's position on most medications is essentially "we don't know." A drug with reassuring small human studies and another with animal evidence of harm can both be Category C. If your doctor prescribes a Category C drug, <span class="hl-warm">push for details about the actual evidence</span>, not just the letter grade.</p>
+
+  <p class="ch-prose"><strong>Category D</strong> drugs have demonstrated evidence of fetal risk but might be justified in serious situations. An example is <strong>tetracycline</strong>, an antibiotic linked to tooth discoloration based on a small 1964 study of just 9 children. <strong>Category X</strong> drugs should never be taken. <strong>Accutane</strong> is the textbook example: among 59 pregnancies with accidental exposure, 20% ended in miscarriage and 35% had major birth defects.</p>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h4>FDA Drug Safety Categories</h4>
+      <p class="chart-sub">Approximate share of drugs and safety level</p>
+      <div class="chart-container" id="chart-fda-categories"></div>
+      <p class="chart-source">Source: FDA classification data &mdash; as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">1</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl">Categories A and B are safe.</span> Folic acid (A) and Tylenol (B) have extensive evidence behind them. Take your prenatal vitamins.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">2</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl-warm">Category C is a black box.</span> 70% of drugs fall here. The letter tells you almost nothing &mdash; you need to look at the actual studies behind each drug.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">3</span>
+      <div class="tk-body">
+        <div class="tk-text">Avoid D and X drugs unless your doctor says the benefit outweighs the risk (Category D) or under no circumstances (Category X).</div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom-line">
+    <div class="bl-label">The Bottom Line</div>
+    <p class="bl-item">&ldquo;You should feel comfortable taking anything in pregnancy categories A and B.&rdquo;</p>
+    <p class="bl-item">&ldquo;You should avoid anything in categories D and X.&rdquo;</p>
+    <p class="bl-item">&ldquo;For drugs in Category C, try to get a better idea of the safety evidence (either from your doctor or from the appendix here).&rdquo;</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  Charts.renderOnVisible('#chart-fda-categories', function () {
+    Charts.lollipopChart('#chart-fda-categories', [
+      { label: 'Category A (safest)', value: 2 },
+      { label: 'Category B (safe)', value: 15 },
+      { label: 'Category C (unknown)', value: 70 },
+      { label: 'Category D (risky)', value: 8 },
+      { label: 'Category X (avoid)', value: 5 },
+    ], { colors: ['#2E7D6A','#2E7D6A','#C9A94E','#C2673A','#C2673A'] });
+  });
+})();
+</script>

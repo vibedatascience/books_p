@@ -1,0 +1,115 @@
+<section class="chapter-section" id="ch01">
+  <div class="ch-head">
+    <span class="ch-head-num">01</span>
+    <h2>Prep Work</h2>
+  </div>
+  <p class="ch-summary">How age and weight actually affect your chances — and what the data says vs. what you've been told.</p>
+
+  <div class="sec-label">Age &amp; Fertility</div>
+
+  <p class="ch-prose">You've probably heard that 35 is the cutoff. The clinical term <em>advanced maternal age</em> kicks in at 35, and doctors talk about eggs having a "sell-by date." But biology doesn't work like a switch. Fertility declines gradually from your teens onward — 30 is slightly lower than 20, 40 lower than 30. The question is how much.</p>
+
+  <p class="ch-prose">The main research uses historical data from the 1800s. Before modern birth control, couples started trying right after marriage, so researchers can compare fertility by the wife's age at marriage. The biology hasn't changed since then. What they found: <strong>between ages 20 and 35, fertility was essentially flat.</strong> Nearly everyone had at least one child. The decline at 35–39 was modest. The real drop didn't come until after 40.</p>
+
+  <div class="charts-row duo">
+    <div class="chart-card">
+      <h4>Fertility by Age Group</h4>
+      <p class="chart-sub">Likelihood of having at least one child, historical data</p>
+      <div class="chart-container" id="chart-fertility-hist"></div>
+      <p class="chart-source">Source: Historical marriage/fertility data — as cited in Expecting Better</p>
+    </div>
+    <div class="chart-card">
+      <h4>Pregnancy Rate After 12 Cycles</h4>
+      <p class="chart-sub">French donor insemination study, ~2,000 women</p>
+      <div class="chart-container" id="chart-fertility-mod"></div>
+      <p class="chart-source">Source: French donor insemination study — as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <p class="ch-prose">Contemporary data is even more encouraging. A French study of ~2,000 women using donor insemination — which controls for how often couples have sex — found that more than half of women over 40 conceived within one year.</p>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">1</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl">35 is not a cliff.</span> It's an administrative label. Between 20 and 35 fertility rates are nearly identical, and the significant decline doesn't start until after 40.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">2</span>
+      <div class="tk-body">
+        <div class="tk-text">Even in the over-35 group, more than half conceived within a year in a controlled study. The odds are much better than the panic suggests.</div>
+      </div>
+    </li>
+  </ul>
+
+  <hr class="ch-divider">
+  <div class="sec-label">Pre-Pregnancy Weight</div>
+
+  <p class="ch-prose">Women worry a lot about weight gain <em>during</em> pregnancy, but the data shows that weight <em>before</em> pregnancy matters more. A few pounds here or there make no difference. The effects come from significant obesity — a BMI over 30.</p>
+
+  <p class="ch-prose">BMI is weight in kilograms divided by height in meters squared. Under 18.5 is underweight, 18.5–25 is normal, 25–30 is overweight, over 30 is obese. For reference: 5'6" and 150 lbs is a BMI of 24.2.</p>
+
+  <p class="ch-prose">One study of ~5,000 births at a single Mississippi hospital — a clean comparison because the women were demographically similar — found that obese women had nearly double the C-section rate and more than triple the preeclampsia risk compared to normal-weight women.</p>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h4>Complications: Normal Weight vs. Obese</h4>
+      <p class="chart-sub">Rates from a single-hospital study, ~5,000 births</p>
+      <div class="chart-container" id="chart-complications"></div>
+      <p class="chart-source">Source: Mississippi hospital study — as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <p class="ch-prose">Obesity also affects conception (harder to get pregnant, higher miscarriage risk) and baby outcomes (larger birth weight, lower APGAR scores). Being underweight can interfere with conception too. The overweight range (BMI 25–30) showed only slightly elevated risks.</p>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">3</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl-warm">Pre-pregnancy weight matters more than pregnancy weight gain.</span> Obesity nearly doubles C-section risk and triples preeclampsia risk.</div>
+        <div class="tk-source">Source: Mississippi hospital study, ~5,000 births</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">4</span>
+      <div class="tk-body">
+        <div class="tk-text">A few pounds don't matter. The risks are from significant obesity, not from missing your "goal weight."</div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom-line">
+    <div class="bl-label">The Bottom Line</div>
+    <p class="bl-item">&ldquo;Fertility declines with age, but not as fast as you might expect — 35 is not a magic number cutoff.&rdquo;</p>
+    <p class="bl-item">&ldquo;Being obese before pregnancy is associated with an increased risk of complications for both you and your baby.&rdquo;</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  Charts.renderOnVisible('#chart-fertility-hist', function () {
+    Charts.waffleChart('#chart-fertility-hist', [
+      { label: 'Age 20\u201335', value: 98 },
+      { label: 'Age 35\u201339', value: 90 },
+      { label: 'Age 40\u201344', value: 62 },
+      { label: 'Age 45\u201349', value: 14 },
+    ], { activeColors: ['#2E7D6A','#2E7D6A','#C9A94E','#C2673A'] });
+  });
+  Charts.renderOnVisible('#chart-fertility-mod', function () {
+    Charts.waffleChart('#chart-fertility-mod', [
+      { label: 'Under 30', value: 75 },
+      { label: 'Age 31\u201335', value: 62 },
+      { label: 'Over 35', value: 54 },
+    ], { activeColors: ['#2E7D6A','#5AA4C8','#C9A94E'] });
+  });
+  Charts.renderOnVisible('#chart-complications', function () {
+    Charts.butterflyChart('#chart-complications', [
+      { category: 'C-Section', left: 23, right: 40 },
+      { category: 'Preeclampsia', left: 4, right: 13 },
+      { category: 'Gest. Diabetes', left: 3, right: 9 },
+      { category: 'Induction', left: 28, right: 36 },
+    ], { leftLabel: 'Normal Weight', rightLabel: 'Obese', leftColor: '#2E7D6A', rightColor: '#C2673A' });
+  });
+})();
+</script>

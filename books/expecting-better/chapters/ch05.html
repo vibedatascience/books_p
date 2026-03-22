@@ -1,0 +1,78 @@
+<section class="chapter-section" id="ch05">
+  <div class="ch-head">
+    <span class="ch-head-num">05</span>
+    <h2>Miscarriage Fears</h2>
+  </div>
+  <p class="ch-summary">What are the actual numbers — and how do they change week by week?</p>
+
+  <div class="sec-label">Risk by Week</div>
+
+  <p class="ch-prose">Everyone knows the first trimester carries the highest risk of miscarriage, but concrete numbers are hard to come by. The convention of waiting until 12 weeks to announce a pregnancy reinforces the idea that something magic happens at that threshold. In reality, miscarriage risk declines gradually — there's no sharp drop at 12 weeks.</p>
+
+  <p class="ch-prose">Before ~5 weeks (one week past your missed period), a pregnancy is considered "chemical" rather than "clinical" — detectable by a test but not yet visible on ultrasound. Many pregnancies are lost in this window, perhaps as many as half. These are the losses discussed in Chapter 3.</p>
+
+  <p class="ch-prose">After 6 weeks, when doctors can see the pregnancy on ultrasound, researchers can track outcomes by week. Studies following women whose first normal prenatal visits came at different points show a clear pattern: <strong>if everything looks normal at 6 weeks, the overall chance of miscarriage is about 11%.</strong> By 8 weeks with a normal visit, it's ~6%. By 11 weeks, less than 2%.</p>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h4>Miscarriage Risk by Week</h4>
+      <p class="chart-sub">% chance of miscarriage given a normal visit at that week</p>
+      <div class="chart-container" id="chart-miscarriage-week"></div>
+      <p class="chart-source">Source: Average across three studies — as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <hr class="ch-divider">
+  <div class="sec-label">What Affects Your Risk</div>
+
+  <p class="ch-prose"><strong>Age</strong> is the biggest factor. One study found miscarriage rates of 4.4% for women under 20, 6.7% for ages 20–35, and nearly 19% for women over 35. This likely reflects a higher rate of chromosomal problems in older eggs. IVF pregnancies also carry higher risk — one large study reported 30% miscarriage for IVF versus 19% for natural conception.</p>
+
+  <p class="ch-prose"><strong>Previous miscarriage</strong> matters too. An English study showed ~4–5% miscarriage for first pregnancies or women with a previous successful pregnancy, but ~25% for women with a prior miscarriage. This sounds alarming, but the vast majority of women who miscarry go on to have successful pregnancies.</p>
+
+  <p class="ch-prose">During early pregnancy, <strong>vaginal bleeding</strong> is a warning sign — 13% of women with bleeding miscarried versus 4.2% without. Bleeding is very common in the first trimester and usually not a problem, but it does indicate slightly higher risk. <strong>Lack of nausea</strong> is another mild signal: nauseous women are less likely to miscarry.</p>
+
+  <p class="ch-prose">After 12 weeks, miscarriage becomes much less common. Most studies put the risk at 1–2%. One study of ~300,000 women found rates as low as 0.6% after 15 weeks.</p>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">1</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl">Risk drops fast.</span> From ~11% at 6 weeks to ~6% at 8 weeks to under 2% at 11 weeks. By 15 weeks it's under 1%.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">2</span>
+      <div class="tk-body">
+        <div class="tk-text">About 90% of first-trimester miscarriages are caused by chromosomal problems determined at fertilization. <span class="hl-warm">There is very little you can do to prevent them.</span></div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">3</span>
+      <div class="tk-body">
+        <div class="tk-text">Age and previous miscarriage are the main risk factors. Even with a prior loss, the odds of a successful next pregnancy are strongly in your favor.</div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom-line">
+    <div class="bl-label">The Bottom Line</div>
+    <p class="bl-item">&ldquo;Around 10 to 15 percent of pregnancies that are developing normally at 6 weeks will end in miscarriage. This rate declines quickly over the first trimester, and falls to around 1 to 2 percent by 11 or 12 weeks.&rdquo;</p>
+    <p class="bl-item">&ldquo;Older age and previous miscarriage increase your risk.&rdquo;</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  Charts.renderOnVisible('#chart-miscarriage-week', function () {
+    Charts.waffleChart('#chart-miscarriage-week', [
+      { label: 'Week 6', value: 11 },
+      { label: 'Week 7', value: 9 },
+      { label: 'Week 8', value: 6 },
+      { label: 'Week 9', value: 4 },
+      { label: 'Week 10', value: 3 },
+      { label: 'Week 11', value: 2 },
+      { label: 'Week 12+', value: 1 },
+    ], { activeColors: ['#C2673A','#C2673A','#C9A94E','#C9A94E','#5AA4C8','#2E7D6A','#2E7D6A'], dotRadius: 3.5, gap: 2 });
+  });
+})();
+</script>

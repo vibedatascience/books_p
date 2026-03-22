@@ -1,0 +1,104 @@
+<section class="chapter-section" id="ch18">
+  <div class="ch-head">
+    <span class="ch-head-num">18</span>
+    <h2>The Labor Numbers</h2>
+  </div>
+  <p class="ch-summary">How long does labor actually take, what are the common problems, and when is a C-section the right call?</p>
+
+  <div class="sec-label">How Long It Takes</div>
+
+  <p class="ch-prose">Labor has three stages. The first &mdash; dilation from 0 to 10 centimeters &mdash; is by far the longest, and is itself divided into early labor (0&ndash;3 cm, mild contractions, can last days), active labor (3&ndash;7 cm, more intense), and transition (7&ndash;10 cm, the hardest part). The second stage is pushing, and the third is delivery of the placenta.</p>
+
+  <p class="ch-prose">The textbook standard &mdash; cervical dilation of at least 1 cm per hour &mdash; comes from a 1955 study of 500 women. A more recent 2002 study of 1,300 women in Hawaii found the real average is <strong>1&ndash;2 cm per hour</strong>, with significant acceleration later: the average woman takes nearly 6 hours to go from 3 to 7 cm, but only 90 minutes from 7 to 10 cm. Before 7 cm, it's common to go 2&ndash;3 hours with no apparent progress. This is normal, not a sign of failure.</p>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h4>Average Dilation Time</h4>
+      <p class="chart-sub">Hours per phase, from 2002 study of 1,300 women</p>
+      <div class="chart-container" id="chart-dilation-time"></div>
+      <p class="chart-source">Source: Hawaii labor study, 2002 &mdash; as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">1</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl">The 1-cm-per-hour rule is outdated.</span> Modern data shows 1&ndash;2 cm/hr on average, with significant stalls before 7 cm being common and normal.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">2</span>
+      <div class="tk-body">
+        <div class="tk-text">Transition (7&ndash;10 cm) is the most painful but usually the shortest phase &mdash; about 90 minutes for most women.</div>
+      </div>
+    </li>
+  </ul>
+
+  <hr class="ch-divider">
+  <div class="sec-label">Common Labor Problems</div>
+
+  <p class="ch-prose">Three main things can go wrong during labor. First, <strong>dilation can stall or proceed too slowly</strong>, which may require Pitocin or lead to a C-section if the baby shows signs of distress. Second, <strong>the baby can get stuck</strong> during pushing, especially if the baby is large or the pelvis is small. Doctors may use forceps or a vacuum extractor &mdash; both safe for the baby, though they increase vaginal tearing for Mom. Third, <strong>the baby may be facing up</strong> (&ldquo;sunny side up&rdquo;), making pushing harder. The baby's position often changes during labor, so prebirth ultrasounds can't predict this.</p>
+
+  <hr class="ch-divider">
+  <div class="sec-label">Breech &amp; C-Sections</div>
+
+  <p class="ch-prose">About 25% of babies are breech at 28 weeks, but most rotate on their own. By delivery, only <strong>3&ndash;4%</strong> remain breech. If your baby is still breech at 37 weeks, doctors can attempt an <strong>ECV (external cephalic version)</strong> &mdash; manually turning the baby from outside. It's successful about half the time. If it fails, you'll almost certainly have a scheduled C-section: randomized studies show vaginal breech delivery is slightly riskier.</p>
+
+  <p class="ch-prose"><strong>VBAC (vaginal birth after Cesarean)</strong> is possible but carries some increased risk. An Australian study found that women planning a VBAC had more infant complications and maternal hemorrhage &mdash; about 2.5% vs. 0.8% in the planned repeat C-section group. About half of attempted VBACs end in a C-section anyway. If you do attempt one, choose a doctor experienced with them.</p>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <h4>VBAC vs. Planned Repeat C-Section</h4>
+      <p class="chart-sub">Rate of serious complications (Australia study)</p>
+      <div class="chart-container" id="chart-vbac"></div>
+      <p class="chart-source">Source: Australian VBAC study &mdash; as cited in Expecting Better</p>
+    </div>
+  </div>
+
+  <ul class="takeaways">
+    <li class="takeaway-item">
+      <span class="tk-num">3</span>
+      <div class="tk-body">
+        <div class="tk-text">C-sections are safe and common (30% of US births) but recovery is slower. They should be a backup, not a default.</div>
+      </div>
+    </li>
+    <li class="takeaway-item">
+      <span class="tk-num">4</span>
+      <div class="tk-body">
+        <div class="tk-text"><span class="hl-warm">If your baby is breech, a scheduled C-section is usually the right call.</span> ECV succeeds about half the time and is worth trying first.</div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom-line">
+    <div class="bl-label">The Bottom Line</div>
+    <p class="bl-item">&ldquo;Labor times vary a lot. Average dilation time is 1 to 2 centimeters an hour after active labor starts.&rdquo;</p>
+    <p class="bl-item">&ldquo;Emergency C-sections are a good option to have, but a C-section should not be your first choice &hellip; unless your baby is breech or (probably) if you've had a C-section before.&rdquo;</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  Charts.renderOnVisible('#chart-dilation-time', function () {
+    Charts.lollipopChart('#chart-dilation-time', [
+      { label: 'Early labor (0\u20133 cm)', value: 100 },
+      { label: 'Active labor (3\u20137 cm)', value: 6 },
+      { label: 'Transition (7\u201310 cm)', value: 1.5 },
+      { label: 'Pushing', value: 1.5 },
+    ], {
+      colors: ['#7E9196','#5AA4C8','#C2673A','#2E7D6A'],
+      valueLabel: function(d) {
+        if (d.value === 100) return 'Variable';
+        return d.value + ' hrs';
+      }
+    });
+  });
+  Charts.renderOnVisible('#chart-vbac', function () {
+    Charts.butterflyChart('#chart-vbac', [
+      { category: 'Infant complications', left: 0.8, right: 2.5 },
+      { category: 'Maternal hemorrhage', left: 0.8, right: 2.5 },
+    ], { leftLabel: 'Planned C-Section', rightLabel: 'Planned VBAC', leftColor: '#2E7D6A', rightColor: '#C2673A', valueLabel: function(d) { return d + '%'; } });
+  });
+})();
+</script>
